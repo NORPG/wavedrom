@@ -25,11 +25,11 @@ jobs:
       run: |
         case "${{ matrix.architecture }}" in
           x64)
-            arch -x86_64 npm ci
+            arch -x86_64 npm i
             arch -x86_64 npm test
             ;;
           arm64)
-            arch -arm64 npm ci
+            arch -arm64 npm i
             arch -arm64 npm test
             ;;
         esac
