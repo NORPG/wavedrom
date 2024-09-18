@@ -35,3 +35,4 @@ jobs:
             arch -arm64 npm ci
             arch -arm64 npm test
             ;;
+        esac
