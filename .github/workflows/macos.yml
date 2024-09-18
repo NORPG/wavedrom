@@ -1,4 +1,4 @@
-name: MacOS ARM64
+name: MacOS
 on: 
   push:
   pull_request:
@@ -9,7 +9,7 @@ jobs:
     runs-on: macOS-latest
     strategy:
       matrix:
-        node-version: [14, 16, 18, 20, 22]
+        node-version: [16, 18, 20, 22]
         architecture: [x64, arm64]
 
     steps:
