@@ -1,12 +1,9 @@
 name: MacOS ARM64
 on: 
   push:
-
   pull_request:
-
   workflow_dispatch:
   
-
 jobs:
   build:
     runs-on: macOS-latest
@@ -24,9 +21,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
         architecture: ${{ matrix.architecture }}
 
-    - name: Build using ARM64 architecture
+    - name: Build using specified architecture
       run: |
-        case "${matrix.architecture}" in
+        case "${{ matrix.architecture }}" in
           x64)
             arch -x86_64 npm ci
             arch -x86_64 npm test
