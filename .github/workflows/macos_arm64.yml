@@ -26,12 +26,12 @@ jobs:
 
     - name: Build using ARM64 architecture
       run: |
-        case "${{ matrix.architecture }}" in
-          x64:
+        case "${matrix.architecture}" in
+          x64)
             arch -x86_64 npm ci
             arch -x86_64 npm test
             ;;
-          arm64:
+          arm64)
             arch -arm64 npm ci
             arch -arm64 npm test
             ;;
